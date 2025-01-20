@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.tmdbclient"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.tmdbclient"
@@ -43,7 +43,8 @@ android {
 }
 
 dependencies {
-    val lifecycleVersion = "2.6.2"
+    implementation("androidx.activity:activity:1.10.0")
+  val lifecycleVersion = "2.6.2"
     val roomVersion = "2.6.1"
     val daggerVersion = "2.42"
     val retrofitVersion = "2.9.0"
