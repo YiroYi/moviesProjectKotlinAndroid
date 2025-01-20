@@ -1,7 +1,8 @@
-package com.example.tmdbclient.data.repository.movie
+package com.example.tmdbclient.data.repository.movie.datasourceImpl
 
 import com.example.tmdbclient.data.db.MovieDAO
 import com.example.tmdbclient.data.model.movie.Movie
+import com.example.tmdbclient.data.repository.movie.datasource.MovieLocalDataSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -12,7 +13,7 @@ abstract class MovieLocalDataSourceImpl(
     return movieDAO.getMovies()
   }
 
-  override suspend fun saveMoviesToDV(movies: List<Movie>) {
+  override suspend fun saveMoviesToDB(movies: List<Movie>) {
     CoroutineScope((Dispatchers.IO)).launch {
       movieDAO.saveMovies(movies)
     }

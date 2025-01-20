@@ -1,6 +1,7 @@
-package com.example.tmdbclient.data.repository.movie
+package com.example.tmdbclient.data.repository.movie.datasourceImpl
 
 import com.example.tmdbclient.data.model.movie.Movie
+import com.example.tmdbclient.data.repository.movie.datasource.MovieCacheDataSource
 
 abstract class MovieCacheDataSourceImpl: MovieCacheDataSource {
   private var movieList = ArrayList<Movie>()
