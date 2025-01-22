@@ -5,7 +5,7 @@ import com.example.tmdbclient.data.model.tvshow.TvShow
 import com.example.tmdbclient.data.repository.movie.datasource.MovieCacheDataSource
 import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowCacheDataSource
 
-abstract class TvShowCacheDataSourceImpl: TvShowCacheDataSource {
+class TvShowCacheDataSourceImpl: TvShowCacheDataSource {
   private var tvShowList = ArrayList<TvShow>()
   override suspend fun getTvShowsFromCache(): List<TvShow> {
     return tvShowList

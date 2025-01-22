@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.android") version "1.9.0"
     id("kotlin-kapt")
 }
 
@@ -17,6 +17,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "API_KEY", "\"f60ae473c8d03fdd88e75848cea96a8e\"")
+        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
 
     }
 
@@ -46,7 +47,7 @@ dependencies {
     implementation("androidx.activity:activity:1.10.0")
   val lifecycleVersion = "2.6.2"
     val roomVersion = "2.6.1"
-    val daggerVersion = "2.42"
+    val daggerVersion = "2.55"
     val retrofitVersion = "2.9.0"
     val glideVersion = "4.13.2"
 
@@ -65,7 +66,10 @@ dependencies {
 
     //Dagger
     implementation ("com.google.dagger:dagger:$daggerVersion")
+    implementation ("com.google.dagger:dagger-android-support:$daggerVersion")
     kapt ("com.google.dagger:dagger-compiler:$daggerVersion")
+    kapt ("com.google.dagger:dagger-android-processor:$daggerVersion")
+
 
     //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:$retrofitVersion")
@@ -83,4 +87,5 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
 }

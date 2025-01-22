@@ -1,11 +1,9 @@
 package com.example.tmdbclient.data.repository.artist.datasourceImpl
 
 import com.example.tmdbclient.data.model.artist.Artist
-import com.example.tmdbclient.data.model.movie.Movie
-import com.example.tmdbclient.data.repository.artist.datasource.ArtisCacheDataSource
-import com.example.tmdbclient.data.repository.movie.datasource.MovieCacheDataSource
+import com.example.tmdbclient.data.repository.artist.datasource.ArtistCacheDataSource
 
-abstract class ArtistCacheDataSourceImpl: ArtisCacheDataSource {
+class ArtistCacheDataSourceImpl: ArtistCacheDataSource {
   private var artistList = ArrayList<Artist>()
   override suspend fun getArtistsFromCache(): List<Artist> {
     return artistList
