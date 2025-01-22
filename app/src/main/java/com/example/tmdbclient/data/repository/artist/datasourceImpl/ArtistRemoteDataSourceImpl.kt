@@ -5,7 +5,7 @@ import com.example.tmdbclient.data.model.artist.ArtistList
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistRemoteDatasource
 import retrofit2.Response
 
-abstract class ArtistRemoteDataSourceImpl(
+class ArtistRemoteDataSourceImpl(
   private val tmdbService: TMDBService,
   private val apiKey: String
 ): ArtistRemoteDatasource {

@@ -5,7 +5,7 @@ import com.example.tmdbclient.data.model.tvshow.TvShowList
 import com.example.tmdbclient.data.repository.tvshow.datasource.TvShowRemoteDatasource
 import retrofit2.Response
 
-abstract class TvShowRemoteDataSourceImpl(
+class TvShowRemoteDataSourceImpl(
   private val tmdbService: TMDBService,
   private val apiKey: String
 ): TvShowRemoteDatasource {

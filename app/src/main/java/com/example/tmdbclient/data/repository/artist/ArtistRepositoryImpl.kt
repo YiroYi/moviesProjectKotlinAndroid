@@ -2,7 +2,7 @@ package com.example.tmdbclient.data.repository.artist
 
 import android.util.Log
 import com.example.tmdbclient.data.model.artist.Artist
-import com.example.tmdbclient.data.repository.artist.datasource.ArtisCacheDataSource
+import com.example.tmdbclient.data.repository.artist.datasource.ArtistCacheDataSource
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistLocalDataSource
 import com.example.tmdbclient.data.repository.artist.datasource.ArtistRemoteDatasource
 import com.example.tmdbclient.domain.repository.ArtistRepository
@@ -10,7 +10,7 @@ import com.example.tmdbclient.domain.repository.ArtistRepository
 class ArtistRepositoryImpl(
   private val artistRemoteDatasource: ArtistRemoteDatasource,
   private val artistLocalDataSource: ArtistLocalDataSource,
-  private val artistCacheDataSource: ArtisCacheDataSource,
+  private val artistCacheDataSource: ArtistCacheDataSource,
 ) : ArtistRepository {
 
   override suspend fun getArtists(): List<Artist>? {
